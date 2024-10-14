@@ -3,12 +3,17 @@
 build.sbt_back
 .metals/
 .vscode/
+data/
+.bloop/
 
 # sbt specific
 dist/*
 target/
 lib_managed/
 src_managed/
+project/.bloop
+project/project
+project/metals*
 project/boot/
 project/plugins/project/
 sbt/*.jar

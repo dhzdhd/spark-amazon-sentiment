@@ -1,10 +1,9 @@
 package dev.dhzdhd.amazonSentiment
 
 import org.apache.spark.{SparkConf, SparkContext}
+import com.johnsnowlabs.nlp.SparkNLP
 
-/** Use this to test the app locally, from sbt: sbt "run inputFile.txt
-  * outputFile.txt" (+ select CountingLocalApp when prompted)
-  */
+// local testing - sbt "run inputFile.txt outputFile.txt"
 object CountingLocalApp extends App {
   val (inputFile, outputFile) = (args(0), args(1))
   val conf = new SparkConf()
@@ -14,8 +13,7 @@ object CountingLocalApp extends App {
   Runner.run(conf, inputFile, outputFile)
 }
 
-/** Use this when submitting the app to a cluster with spark-submit
-  */
+// spark-submit app
 object CountingApp extends App {
   val (inputFile, outputFile) = (args(0), args(1))
 
