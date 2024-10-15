@@ -5,14 +5,4 @@ services:
     volumes:
       - ./app:/home/app
       - ./output:/home/output
-    command:
-      [
-        "spark-submit",
-        "--class",
-        "dev.dhzdhd.amazonSentiment.CountingApp",
-        "--name",
-        "counting_app",
-        "/home/app/target/scala-2.12/amazonSentiment-assembly-0.0.1.jar",
-        "/home/app/data/input.txt",
-        /home/output,
-      ]
+    command: "/home/app/run.sh"

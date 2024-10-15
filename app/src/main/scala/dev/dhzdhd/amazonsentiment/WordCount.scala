@@ -3,11 +3,6 @@ package dev.dhzdhd.amazonSentiment
 import org.apache.spark.rdd._
 
 object WordCount {
-
-  /** A slightly more complex than normal wordcount example with optional
-    * separators and stopWords. Splits on the provided separators, removes the
-    * stopwords, and converts everything to lower case.
-    */
   def withStopWordsFiltered(
       rdd: RDD[String],
       separators: Array[Char] = " ".toCharArray,
@@ -22,5 +17,6 @@ object WordCount {
     val wordPairs = words.map((_, 1))
     val wordCounts = wordPairs.reduceByKey(_ + _)
     wordCounts
+
   }
 }
