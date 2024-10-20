@@ -1,7 +1,9 @@
 services:
   spark:
     container_name: spark
-    image: bitnami/spark:3.5.3
+    image: bitnami/spark:3.4.0
+    ports:
+      - 4040:4040
     volumes:
       - ./app:/home/app
       - ./output:/home/output
