@@ -2,9 +2,9 @@ package dev.dhzdhd.amazonSentiment
 
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.sql.{SparkSession}
-import com.johnsnowlabs.nlp.annotators.classifier.dl.MultiClassifierDLApproach
-import com.johnsnowlabs.nlp.base.DocumentAssembler
-import com.johnsnowlabs.nlp.embeddings.UniversalSentenceEncoder
+import _root_.com.johnsnowlabs.nlp.annotators.classifier.dl.MultiClassifierDLApproach
+import _root_.com.johnsnowlabs.nlp.base.DocumentAssembler
+import _root_.com.johnsnowlabs.nlp.embeddings.UniversalSentenceEncoder
 import org.apache.spark.rdd._
 import org.apache.spark.ml.Pipeline
 
